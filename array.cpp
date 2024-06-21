@@ -148,6 +148,9 @@ using namespace std;
 // }
 
 
+
+
+
 // Arayys movessssssssssss Zerooooooooooooooooooooo
 
 // void ending(int arr[],int n){
@@ -178,33 +181,55 @@ using namespace std;
 // }
 
 
-void ending(int arr[],int n){
-    int i=0;
-    for(int j=0;j<n;j++){
-        if(arr[j]!=0){
-            swap(arr[j],arr[i]);
-            i++;
-        }
-    }
+// void ending(int arr[],int n){
+//     int i=0;
+//     for(int j=0;j<n;j++){
+//         if(arr[j]!=0){
+//             swap(arr[j],arr[i]);
+//             i++;
+//         }
+//     }
 
-}
-
-
+// }
 
 
- void display(int arr[],int size){
-    for(int i=0;i<size;i++){
-        cout<<arr[i]<<" ";
-    }
-}
 
+
+//  void display(int arr[],int size){
+//     for(int i=0;i<size;i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+
+// int main(){
+
+//     int arr[11]={1,0,1,20,5,0,8,9,10,20,0};
+//     int Size=11;
+//     display(arr,Size);
+//     ending(arr,Size);
+//     display(arr,Size);
+
+// }
+
+
+void reverse(int arr[], int size){
+    int start=0;
+    int end=size-1;
+    while(start<=end){
+        swap(arr[start],arr[end]);
+        start++;
+        end--;}}
+
+
+void display(int arr[],int size){
+ for(int i=0;i<size;i++){
+    cout<<arr[i]<<"  ";}}
 
 int main(){
-
-    int arr[11]={1,0,1,20,5,0,8,9,10,20,0};
-    int Size=11;
-    display(arr,Size);
-    ending(arr,Size);
-    display(arr,Size);
-
+    int arr[6]={1,2,3,4,5,6};
+    int size=6;
+    display(arr,size);
+    reverse(arr,size);
+    display(arr,size);
 }

@@ -5,7 +5,6 @@ void rotate(int arr[],int size){
        int arr1= (size+2)%size;
        cout<<arr1<<" This is";
 }
-
  void display(int arr[],int size){
     for(int i=0;i<size;i++){
         cout<<arr[i]<<" ";
