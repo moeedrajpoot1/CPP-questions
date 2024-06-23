@@ -105,32 +105,49 @@ using namespace std;
 //    }
 // }
 
-int count(char n[]){
+//
+
+
+int check(char word[],int n){
+    int start=0;
+    int end=n-1;
+while(start<=end){
+    if(word[start++]==word[end--]){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+}
+
+
+
+
+
+
+int count(char word[]){
     int letters=0;
-    for(int i=0;n[i]!='\0';i++){
-     letters++;
+    for(int i=0;word[i]!='\0';i++){
+       letters++;
     }
     return letters;
 }
 
-void reverse(char n[],int name){
-    int start=0;
-    int end=name-1;
-    while(start<=end){
-        swap(n[start++],n[end--]);
-    }
-
-}
 
 
 int main(){
-  char n[20];
-  cout<<"Enter Your Name:-";
-  cin>>n;
-  int name= count(n);
-  reverse(n,name );
-  cout<<"Your Name is ";
-  cout<<n;
- 
+    char word[20];
+    cout<<"Enter A Word ";
+    cin>>word;
+    int counting=count(word);
+    
+if(check(word,counting)==1){
+    cout<<"Its A Palindrom word "<<word;
+}
+else{
+    cout<<"Its not  A Palindrom word ";
+}
+    
 
 }
