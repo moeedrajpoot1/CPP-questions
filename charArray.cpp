@@ -137,17 +137,19 @@ int count(char word[]){
 
 
 int main(){
-    char word[20];
-    cout<<"Enter A Word ";
-    cin>>word;
-    int counting=count(word);
+//     char word[20];
+//     cout<<"Enter A Word ";
+//     cin>>word;
+//     int counting=count(word);
     
-if(check(word,counting)==1){
-    cout<<"Its A Palindrom word "<<word;
-}
-else{
-    cout<<"Its not  A Palindrom word ";
-}
-    
+// if(check(word,counting)==1){
+//     cout<<"Its A Palindrom word "<<word;
+// }
+// else{
+//     cout<<"Its not  A Palindrom word ";
+// }
+    // int arr[] ={1,2,3,4};
+    // int size = sizeof(arr)/sizeof(arr[0]);
+    // cout<<size;
 
 }
