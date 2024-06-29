@@ -222,6 +222,10 @@ using namespace std;
     
 // }
 
+/// Find The Intersection of arrays matlab same values niklni hain  Sorted arrays
+ 
+
+
 
 
 
