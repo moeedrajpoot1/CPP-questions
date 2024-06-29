@@ -138,53 +138,101 @@ using namespace std;
 // }
 
 
+////////////// Swap Alternate ////////////////////////
 
 
-
-
-
-
-
-
-
-// bool reverse(char name[],int leng){
-//  int start=0;
-//  int end=leng-1;
-//  while(start<=end){
-//     if(name[start++]==name[end--]){
-//         return 1;
+// void swapAlternate(int arr[],int size){
+// for(int i=0;i<size;i+=2){
+//     if(i+1<size){
+//         swap(arr[i],arr[i+1]);
+        
 //     }
-//     else{
-//         return 0;
-//     }
-//  }
+   
 // }
-
-
-
-
-// int  lenghtis(char name[]){
-//     int count=0;
-//     for(int i=0;name[i]!='\0';i++){
-//         count++;
-//     }
-//     return count;
 // }
-
-
-
+// void printArray(int arr[],int size){
+//     for(int i=0;i<size;i++){
+//        cout<<arr[i]<<" ";
+//     }
+//      cout<<endl;
+// }
 // int main(){
-//     char name[20];
-//     cin>>name;
-//     int leng=lenghtis(name);
-//    if( reverse(name,leng)==1){
-//     cout<<"It is Palindrom ";
-//    }
-//    else{
-//     cout<<'it is not palindrom ';
-//    }
+//     int even[8]={1,2,3,4,5,6,7,8};
+//     int evenSize=8;
+//     int odd[7]={1,2,3,4,5,6,7};
+//     int OddSize=7;
+//     swapAlternate(even,evenSize);
 
+//     printArray(even,evenSize);
+//     swapAlternate(odd,OddSize);
+//     printArray(odd,OddSize);
 // }
+
+
+/////  Find Unique//////////////////
+
+// int CheckUnique(int arr[],int size){
+//     int result=0;
+// for(int i=0;i<size;i++){
+//      result=result^arr[i];  ////Zor operator aik jaisy element ko kat deta /
+        
+//     }
+//     return result;
+   
+// }
+
+// int main() {
+//    int even[7]={2,3,4,0,2,3,4};
+//     int evenSize=7;
+   
+//    cout<< CheckUnique(even,evenSize)<<endl;
+
+  
+    
+// }
+
+
+
+
+//// Find Duplicates//////////
+
+
+// int CheckDuplicates(int arr[],int size){
+    
+// for(int i=0;i<size;i++){
+//     for(int j=0;j<size;j++){
+//         if(i!=j && arr[i]==arr[j]){
+//            return arr[i];
+//             break;
+//         }
+//     }
+// }
+//   }
+    
+   
+
+
+// int main() {
+//     int even[8]={2,1,2,2,3,4,6,7};
+//     int evenSize=8;
+   
+//     cout<< CheckDuplicates(even,evenSize)<<endl;
+
+  
+    
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
