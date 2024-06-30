@@ -219,11 +219,88 @@ using namespace std;
 //     cout<< CheckDuplicates(even,evenSize)<<endl;
 
   
-    
 // }
 
-/// Find The Intersection of arrays matlab same values niklni hain  Sorted arrays
- 
+
+
+
+//Find The Intersection of arrays matlab same values niklni hain  Sorted array 
+
+
+
+
+
+
+// Aiik array diya hoa hai aik number diya hoa ha sum=5 or btana ha
+
+// int check(int arr[],int size, int key){
+
+//  for(int i=0;i<size;i++){
+//     for(int j=i+1;j<size;j++){
+//         if(arr[i]+arr[j]==key){
+//             cout<<" "<<arr[i]<<" "<<arr[j];} } }}
+
+
+// int main(){
+//     int arr[6]={1,2,3,4,7,5};
+//     int size=6;
+//     int key=5;
+//     check(arr,size,key);}
+
+
+
+
+
+// Set 0//11    Sort 0 at right side 
+
+
+
+// void sortOne(int arr[],int size){
+//     int start=0;
+//     int end=size-1;
+//    while(start<end){
+//      while(arr[start]==0 && start<end){
+//         start++;
+//     }
+//     while(arr[end]==1 && start<end){
+//         end--;
+//     }
+//     if(start<end){
+//         swap(arr[start++],arr[end--]);
+//     }
+
+
+//    }
+
+
+// }
+
+
+
+
+// void printArray(int arr[],int size){
+//     for(int i=0;i<size;i++){
+// cout<<arr[i]<<" ";
+//     }
+//     cout<<endl;
+// }
+
+
+
+
+// int main(){
+//     int arr[7]={1,1,0,1,0,1,0};
+//     int size=7;
+//     printArray(arr,size);
+//     sortOne(arr,size);
+//     printArray(arr,size);
+// }
+
+
+
+
+
+
 
 
 
