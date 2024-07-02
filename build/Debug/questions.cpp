@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+ 
 
 // Maximum And Minimu In arraysssssssssssssssssssssssssssssssss
 
@@ -10,8 +10,6 @@ using namespace std;
 //         minv=num[i];}}
 //    return minv;
 // }
-
-
 // int getMax(int num[],int size){
 //     int max=INT_MIN;
 //     for(int i=0;i<size;i++){
