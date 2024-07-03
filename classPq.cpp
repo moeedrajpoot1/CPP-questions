@@ -141,29 +141,56 @@ using namespace std;
 
 
 
-void reverse(int arr[],int size){
-    int start=0;
-    int end=size-1;
-    while(start<end){
-       if(arr[start]==)
+// void reverse(int arr[],int size){
+//     int start=0;
+//     int end=size-1;
+//     while(start<end){
+//        if(arr[start]==)
 
-    }
-}
+//     }
+// }
 
-int printArray(int num){
-    for(int i=0;i<num;i++){
-        cout<<i<<" ";
-    }
-    cout<<endl;
-}
+// int printArray(int num){
+//     for(int i=0;i<num;i++){
+//         cout<<i<<" ";
+//     }
+//     cout<<endl;
+// }
 
-int main(){
-    int arr[3]={1,0,1};
-    int size=3;
-    reverse(arr,size);
-    printArray(num);
+// int main(){
+//     int arr[3]={1,0,1};
+//     int size=3;
+//     reverse(arr,size);
+//     printArray(num);
     
-}
+// }
 
+
+
+/// Move Zeroo
+// void  moveZero(int arr[],int size){
+//    int nonZero=0;
+//    for(int j=0;j<size;j++){
+//        if(arr[j]!=0){
+//            swap(arr[j],arr[nonZero]);
+//            nonZero++;
+           
+//        }
+//    }
+    
+// }
+// void printarray(int arr[],int size){
+//     for(int i=0;i<size;i++){
+//         cout<<arr[i]<<" ";
+//     }
+//     cout<<endl;
+// }
+
+// int main() {
+//    int arr[6]={1,0,2,1,0,3};
+//    int size=6;
+//    moveZero(arr,size);
+//    printarray(arr,size);
+// }
 
 
