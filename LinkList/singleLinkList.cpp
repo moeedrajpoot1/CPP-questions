@@ -85,6 +85,80 @@ using namespace std;
 
 //  }
 
+// Insert At  POOOOOSSSSSSSSSSSSIIIIIIIIIIIIIITTTTTTTTTTTTIIIIIIIIIOOONNNNNNNNNNNN
+
+
+class Node{
+    public:
+    int data;
+    Node* next;
+
+    public:
+    Node(int val){
+        this->data=val;
+        this->next=nullptr;
+    }
+};
 
 
 
+
+
+
+
+
+void AddatEnd(Node* &tail,int d){
+Node* temp= new Node(d);
+tail->next=temp;
+tail=tail->next;
+
+
+};
+
+
+
+
+void insertPosition(Node* &head,int position,int d){
+    Node* temp=head;
+
+    int cnt=1;
+    while(cnt<position-1){
+        temp=temp->next;
+        cnt++;
+    }
+    Node* NodeToInsert= new Node(45);
+    NodeToInsert->next=temp->next;
+    temp->next=NodeToInsert;
+
+}
+
+
+
+
+
+
+
+ void PrintLinkedList(Node* &head){
+Node* temp=head;
+while(temp!=nullptr){
+    cout<<temp->data<<" ";
+    temp=temp->next;
+
+}
+ };
+
+
+ int main(){
+    Node* node1=new Node(200);
+    Node* head=node1;
+    Node* tail=node1;
+   
+    AddatEnd(tail,30);
+    AddatEnd(tail,40);
+    AddatEnd(tail,50);
+    AddatEnd(tail,60);
+    PrintLinkedList(head);
+    insertPosition(head,3,45);
+    PrintLinkedList(head);
+
+ }
