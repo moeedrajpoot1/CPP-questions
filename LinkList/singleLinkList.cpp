@@ -198,6 +198,7 @@ while(temp!=nullptr){
     temp=temp->next;
 
 }
+cout<<endl;
  };
 
 
@@ -222,7 +223,50 @@ temp->next=NewAdd;
 
 // Deleting Nodesss
 
+// void deleteNode(int position,Node* &head){
+// if(position==1){
+//     Node* temp=head;
+//   head=head->next;
 
+//   //memory free start node
+//   delete temp;
+
+
+// }
+// else{
+//      Node* current=head;
+//      Node* prev=NULL;
+//      int count=1;
+//      while(count<position){
+//         prev=current;
+//         current=current->next;
+        
+//         count++;
+//      }
+//      prev->next=current->next;
+//      delete current;
+// }
+// }
+
+int deleteNode(int position,Node* &head){
+    if(position==1){
+           Node* temp=head;
+           head=head->next;
+           delete temp;               
+    }
+    else{
+         Node* current=head;
+         Node* prev=NULL;
+         int count =1;
+         while(count<position){
+            prev=current;
+            current=current->next;
+            count++;
+         }
+         prev->next=current->next;
+         delete current;
+    }
+}
 
 int main(){
     Node* node1=new Node(20);
@@ -236,5 +280,7 @@ int main(){
      insertAtmid(tail,head,1,4);
      insertAtmid(tail,head,7,41);
     PrintLinkedList(head);
+     deleteNode(7,head);
+      PrintLinkedList(head);
 
 }
