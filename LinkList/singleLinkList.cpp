@@ -88,56 +88,109 @@ using namespace std;
 // Insert At  POOOOOSSSSSSSSSSSSIIIIIIIIIIIIIITTTTTTTTTTTTIIIIIIIIIOOONNNNNNNNNNNN
 
 
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
+
+//     public:
+//     Node(int val){
+//         this->data=val;
+//         this->next=nullptr;
+//     }
+// };
+
+
+
+
+
+
+
+
+// void AddatEnd(Node* &tail,int d){
+// Node* temp= new Node(d);
+// tail->next=temp;
+// tail=tail->next;
+
+
+// };
+
+
+
+
+// void insertPosition(Node* &head,int position,int d){
+//     Node* temp=head;
+
+//     int cnt=1;
+//     while(cnt<position-1){
+//         temp=temp->next;
+//         cnt++;
+//     }
+//     Node* NodeToInsert= new Node(45);
+//     NodeToInsert->next=temp->next;
+//     temp->next=NodeToInsert;
+
+// }
+
+
+
+
+
+
+
+//  void PrintLinkedList(Node* &head){
+// Node* temp=head;
+// while(temp!=nullptr){
+//     cout<<temp->data<<" ";
+//     temp=temp->next;
+
+// }
+//  };
+
+
+//  int main(){
+//     Node* node1=new Node(200);
+//     Node* head=node1;
+//     Node* tail=node1;
+   
+//     AddatEnd(tail,30);
+//     AddatEnd(tail,40);
+//     AddatEnd(tail,50);
+//     AddatEnd(tail,60);
+//     PrintLinkedList(head);
+//     insertPosition(head,3,45);
+//     PrintLinkedList(head);
+
+//  }
+
+
+// All 3 insertions in Single Linked List 
+
+
+
 class Node{
     public:
     int data;
     Node* next;
-
-    public:
     Node(int val){
-        this->data=val;
-        this->next=nullptr;
+     this->data=val;
+     this->next=nullptr;
     }
 };
 
-
-
-
-
-
-
-
-void AddatEnd(Node* &tail,int d){
-Node* temp= new Node(d);
+void insertAtEnd(Node* &tail,int d){
+Node* temp=new Node(d);
 tail->next=temp;
-tail=tail->next;
-
-
-};
-
-
-
-
-void insertPosition(Node* &head,int position,int d){
-    Node* temp=head;
-
-    int cnt=1;
-    while(cnt<position-1){
-        temp=temp->next;
-        cnt++;
-    }
-    Node* NodeToInsert= new Node(45);
-    NodeToInsert->next=temp->next;
-    temp->next=NodeToInsert;
+tail=temp;
 
 }
 
 
-
-
-
-
-
+void insertHead(Node* &head,int d){
+Node* temp=new Node(d);
+temp->next=head;
+head=temp;
+}
  void PrintLinkedList(Node* &head){
 Node* temp=head;
 while(temp!=nullptr){
@@ -148,17 +201,40 @@ while(temp!=nullptr){
  };
 
 
- int main(){
-    Node* node1=new Node(200);
+ void insertAtmid(Node* &tail,Node* &head,int position, int d){
+    if(position==1){
+     return insertHead(head, d);
+    };
+Node* temp=head;
+int count=1;
+while(count<position-1){
+    temp=temp->next;
+    count++;
+}
+if(temp->next==nullptr){
+    return insertAtEnd(tail, d);
+}
+
+Node* NewAdd=new Node(d);
+NewAdd->next=temp->next;
+temp->next=NewAdd;
+}
+
+// Deleting Nodesss
+
+
+
+int main(){
+    Node* node1=new Node(20);
     Node* head=node1;
     Node* tail=node1;
-   
-    AddatEnd(tail,30);
-    AddatEnd(tail,40);
-    AddatEnd(tail,50);
-    AddatEnd(tail,60);
-    PrintLinkedList(head);
-    insertPosition(head,3,45);
+
+    insertHead(head,10);
+    insertHead(head,5);
+     insertAtEnd(tail,30);
+     insertAtEnd(tail,40);
+     insertAtmid(tail,head,1,4);
+     insertAtmid(tail,head,7,41);
     PrintLinkedList(head);
 
- }
+}
