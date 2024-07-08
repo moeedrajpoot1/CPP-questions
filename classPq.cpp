@@ -83,29 +83,29 @@ using namespace std;
 // }
 
 
-// int CheckDuplicates(int arr[],int size){
+int CheckDuplicates(int arr[],int size){
     
-// for(int i=0;i<size;i++){
-//     for(int j=0;j<size;j++){
-//         if(i!=j && arr[i]==arr[j]){
-//            return arr[i];
-//             break;
-//         }
-//     }
-// }
-//   }
+for(int i=0;i<size;i++){
+    for(int j=0;j<size;j++){
+        if(i!=j && arr[i]==arr[j]){
+           return arr[i];
+            break;
+        }
+    }
+}
+  }
     
    
 
 
-// int main() {
-//     int even[8]={2,1,2,2,3,4,6,7};
-//     int evenSize=8;
+int main() {
+    int even[8]={2,1,2,2,3,4,6,7};
+    int evenSize=8;
    
-//     cout<< CheckDuplicates(even,evenSize)<<endl;
+    cout<< CheckDuplicates(even,evenSize)<<endl;
 
   
-// }
+}
 
 // Traverse And reeverse
 // void reverse(int arr[],int size){

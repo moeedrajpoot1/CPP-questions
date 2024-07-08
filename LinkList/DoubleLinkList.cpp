@@ -43,7 +43,33 @@ int getLength(Node* &head){
 }
 
 void InsertatHead(Node* &head,int d){
+Node* temp=new Node(d);
+temp->next=head;
+head->prev=temp;
+head=temp;
 
+}
+
+void insertatEnd(Node* &tail,int d){
+Node* temp=new Node(d);
+tail->next=temp;
+temp->prev=tail;
+tail=temp;
+}
+
+void insertAtPosition(Node* &head,int position, int d){
+
+Node* temp=head;
+int count=1;
+while(count<position-1){
+    temp=temp->next;
+    count++;
+}
+Node* element=new Node(d);
+element->next=temp->next;
+temp->next->prev=element;
+temp->next=element;
+element->prev=temp;
 
 
 
@@ -55,13 +81,19 @@ void InsertatHead(Node* &head,int d){
 
 
 
-
 int main(){
   Node* node1=new Node(20);
   Node* head=node1;
+  Node* tail=node1;
+ 
+//   InsertatHead(head,10);
+insertatEnd(tail,30);
+insertatEnd(tail,40);
+
   PrintList(head);
-cout<<getLength(head)<<" the Length is  ";
-  InsertatHead(head,10);
+   insertAtPosition(head,2,31);
+   PrintList(head);
+  
 }
 
 
